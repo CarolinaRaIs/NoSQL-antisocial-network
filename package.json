@@ -1,0 +1,42 @@
+{
+  "name": "nosql-antisocial-network",
+  "version": "1.0.0",
+  "description": "An API for a social network web app where users can share their thoughts.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarolinaRaIs/NoSQL-antisocial-network.git"
+  },
+  "keywords": [
+    "NoSQL",
+    "Social",
+    "Network",
+    "API",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "Web",
+    "Application",
+    "Routing",
+    "Database",
+    "CRUD",
+    "REST",
+    "Full-stack",
+    "JavaScript",
+    "Node.js"
+  ],
+  "author": "CarolinaRaIs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CarolinaRaIs/NoSQL-antisocial-network/issues"
+  },
+  "homepage": "https://github.com/CarolinaRaIs/NoSQL-antisocial-network#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.11.1"
+  }
+}
