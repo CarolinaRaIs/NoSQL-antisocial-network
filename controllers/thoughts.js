@@ -6,8 +6,6 @@
 //deleteThought,
 //addReaction,
 //deleteReaction,
-
-
 const { Thoughts, User } = require('../models');
 
 module.exports = {
