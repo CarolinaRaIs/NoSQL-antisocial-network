@@ -73,10 +73,58 @@ module.exports = {
     async updateThought(req, res) {
         try {
             const thoughts = await Thoughts.findOneAndUpdate(
-            
+                { _id: req.params.id },
+                { $set: req.body },
+                { new: true }
             )
+                .populate({ path: "reactions", select: "-__v" })
+                .select("-__v");
+            if (!thoughts) {
+                res.status(404).json({ message: "No thought found!" });
+            } else {
+                res.json(thoughts);
+            }
+        } catch (err) {
+            res.status(500).json(err);
         }
-    }
+    },
+
+    // Delete a thought by ID
+    async deleteThought(req, res) {
+        try {
+            const thoughts = await Thoughts.findOneAndDelete({ _id:req.params.id });
+            if (!thoughts) {
+                res.status(404).json({ message: "No thought found!" });
+            } else {
+                res.json({ message: "Thought successfully deleted"})
+            }
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
+
+    // Create a reaction for a thought
+    async createReaction(req, res) {
+        try {
+            const thoughts = await Thoughts.findByIdAndUpdate(
+                { _id: req. params.id },
+                { $addToSet: { reactions: req.body } },
+                { new: true }
+            )
+                .populate({ path: "reactions", select: "-__v" })
+                .select("-__v");
         
+            if (!thoughts) {
+                res.status(404).json({ message: "No thought found!" });
+            } else {
+                res.json(thoughts);
+            } 
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
+    
+
+    
 
 }
