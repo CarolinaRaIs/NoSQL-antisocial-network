@@ -1,4 +1,12 @@
 //Define the controller functions for handling thought-related operations.
+//getThoughts,
+//getThoughtById,
+//createThought,
+//updateThought,
+//deleteThought,
+//addReaction,
+//deleteReaction,
+
 
 const { Thoughts, User } = require('../models');
 
@@ -16,15 +24,59 @@ module.exports = {
                     //The __v field is automatically added by Mongoose to track the version of the document.
                 .select("-__v");
 
-            if (!thought) {
+            if (!thoughts) {
                 res.status(404).json({ message: "No thoughts found!" });
-
             } else {
-                res.json(thought);
+                //res.json(thoughts) = takes the thoughts data, converts it to JSON format, and sends it as the response to the client. 
+                res.json(thoughts);
             }
-
         } catch (err) {
             res.status(500).json(err);
         }
     }
+
+    // Get a single thought by ID
+    async getThoughtById(req, res) {
+        try {
+            // findOne({ _id: req.params.id })= a Mongoose query method used to find a single document in the Thought collection based on a specific condition
+            // the specific condition: { _id: req.params.id } = which matches the _id field of the thought document with the value passed as req.params.id
+            // req.params.id =  a parameter in the request URL, used to identify a specific thought by its unique ID.
+            const thoughts = await Thoughts.findOne({ _id: req.params.id })
+                .populate({ path: "reactions", select: "-__v" })
+                .select("-__v");
+            if (!thoughts) {
+                res.status(404).json({ message: "No thoughts found!" });
+            } else {
+                res.json(thoughts);
+            }
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
+
+    // Create a new thought
+    async createThought(req, res) {
+        try {
+            const thoughts = await Thoughts.create(req.body);
+            await User.findOneAndUpdate(
+                { _id: req.params.userId },
+                { $addToSet: { thoughts: thoughts._id } },
+                { new: true }
+            );
+            res.json(thoughts);
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
+
+    // Update a thought by ID
+    async updateThought(req, res) {
+        try {
+            const thoughts = await Thoughts.findOneAndUpdate(
+            
+            )
+        }
+    }
+        
+
 }
