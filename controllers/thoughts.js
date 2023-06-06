@@ -32,7 +32,7 @@ module.exports = {
         } catch (err) {
             res.status(500).json(err);
         }
-    }
+    },
 
     // Get a single thought by ID
     async getThoughtById(req, res) {
@@ -103,10 +103,10 @@ module.exports = {
     },
 
     // Create a reaction for a thought
-    async createReaction(req, res) {
+    async addReaction(req, res) {
         try {
             const thoughts = await Thoughts.findByIdAndUpdate(
-                { _id: req. params.id },
+                { _id: req.params.id },
                 { $addToSet: { reactions: req.body } },
                 { new: true }
             )
@@ -126,7 +126,7 @@ module.exports = {
     // Delete a reaction from a thought
     async deleteReaction(req, res) {
         try {
-            const thoughts = await Thought.findOneAndUpdate(
+            const thoughts = await Thoughts.findOneAndUpdate(
                 { _id: req.params.thoughtId },
                 { $pull: { reactions: { reactionId: req.params.reactionId} } },
                 { new: true }
