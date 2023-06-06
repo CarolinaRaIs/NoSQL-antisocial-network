@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 //establishes a connection to a MongoDB database hosted on the local machine (localhost) at port 27017. The database name is antisocialNetworkDB.
 mongoose.connect('mongodb://localhost:27017/antisocialNetworkDB', {
-  //tells Mongoose to use the new URL parser.  
+  //tells Mongoose to use the new URL parser.
   useNewUrlParser: true,
   //enables the new Server Discovery and Monitoring engine
   useUnifiedTopology: true,
