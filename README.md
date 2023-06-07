@@ -60,12 +60,12 @@
     * When done testing you can stop the application by pressing CTRL + C in your terminal.
 
 Example of testing a route in Insomnia:
-![plot](./insomnia-test-example.png)
+![plot](./antiSocial-Network-Route-Test-Example.png)
+
+[Video Walk-through: Testing Routes In Insomnia](https://drive.google.com/file/d/1OpiQ_ZYnzZYq_J4PBbyFfUdwX6WTeDwY/view)
 
 Disclaimer: This video contains background music that is not my own. I do not own the rights to the music, and it is used for entertainment purposes only, to listen to more of their music click on the following
 [label](https://open.spotify.com/artist/4eYVVrnphe4blxWuzahYQE).
-
-[Video Walk-through: Testing Routes In Insomnia](https://drive.google.com/file/d/1OpiQ_ZYnzZYq_J4PBbyFfUdwX6WTeDwY/view)
 
     To access the Github Repository visit:
     https://github.com/CarolinaRaIs/NoSQL-antisocial-network
