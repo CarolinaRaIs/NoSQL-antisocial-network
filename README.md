@@ -1,9 +1,6 @@
 # NoSQL-antisocial-network
-An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.
 
-# shop-here-orm-e-commerce-backend
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-
 
 ## [Description:](#description)
 
@@ -29,39 +26,28 @@ An API for a social network web application where users can share their thoughts
    
 ## [Installation:](#installation:)
 
-    Prior to using the application:
+    Prior to using the NoSQL: AntiSocial Network API application, you should follow these steps:
 
-    * clone the repository and install the required dependencies with npm install or npm i
+    Clone the repository and install the required dependencies using the command npm install or npm i.
 
-    These are the dependencies you should:
-     * Node.js:
-        A JavaScript runtime environment that executes JavaScript code outside of a web browser.
+    The application relies on the following dependencies:
 
-     * MYSQL2:
-        A MySQL database driver for Node.js that enables interaction with MySQL databases
+        Node.js: This JavaScript runtime environment executes JavaScript code outside of a web browser, allowing the application to run as a standalone server.
 
-    * Sequelize: 
-        An Object Relational Mapping (ORM) library that provides an easier way to interact with databases by representing database tables as JavaScript objects.
+        MongoDB: A popular NoSQL database used by many social networks. MongoDB offers 
+        speed and flexibility for handling large amounts of unstructured data.
 
-     * Express.js:
-        A web framework that allows for easy creation of RESTful APIs.
+        Mongoose: Mongoose is an Object Data Modeling (ODM) library for MongoDB, which provides a convenient and structured way to interact with the database. It simplifies tasks such as defining schemas, creating models, and performing database operations.
 
-    * dotenv:
-        A zero-dependency module that loads environment variables from a .env file into process.env. This makes it easy to keep sensitive information like API keys and database passwords out of code and safely stored in an environment file.
+        Express.js: Express.js is a web framework that simplifies the process of building RESTful APIs. It provides a robust set of features for routing, handling requests, and creating endpoints.
+
+        dotenv: This dependency is used to load environment variables from a .env file into the application's process.env. It ensures sensitive information like API keys and database passwords are securely stored and not exposed in the code.
+
+    By installing these dependencies, you will have the necessary tools to run and interact with the NoSQL Challenge: Social Network API application.
  
 ## [Usage:](#usage:)
 
-    To use this e-commerce back-end application, you'll need to make sure you first cloned the repository to your local machine and installed the required dependencies by running npm install or npm i, then follow the steps below:
-
-    * create a new .env file at the root of the project and add your MYSQL credentials (DB_NAME, DB_USR, and DB_PW).
-
-    * Connect to MySQL database With your own database credentials; $ mysql -u root -p
-    
-    * Create the database schema mysql> source db/schema.sql;
-    
-    * Exit the database mysql> exit
-    
-    * Populate the database $ npm run seed
+    To using the NoSQL: AntiSocial Network API application, you'll need to make sure you first cloned the repository to your local machine and installed the required dependencies by running npm install or npm i, then follow the steps below:
     
     * Start the server $ npm start
 
@@ -76,17 +62,20 @@ An API for a social network web application where users can share their thoughts
 Example of testing a route in Insomnia:
 ![plot](./insomnia-test-example.png)
 
-[Video Walk-through: Testing Routes In Insomnia](https://drive.google.com/file/d/1jrcaVYFqHufM4ovCH7TUHCeH83FJPhkV/view?usp=share_link)
+Disclaimer: This video contains background music that is not my own. I do not own the rights to the music, and it is used for entertainment purposes only, to listen to more of their music click on the following
+[label](https://open.spotify.com/artist/4eYVVrnphe4blxWuzahYQE).
+
+[Video Walk-through: Testing Routes In Insomnia](https://drive.google.com/file/d/1OpiQ_ZYnzZYq_J4PBbyFfUdwX6WTeDwY/view)
 
     To access the Github Repository visit:
-       https://github.com/CarolinaRaIs/shop-here-orm-e-commerce-backend
+    https://github.com/CarolinaRaIs/NoSQL-antisocial-network
 
     To access the deployed site visit:
-        https://carolinarais.github.io/shop-here-orm-e-commerce-backend/ 
+    https://carolinarais.github.io/NoSQL-antisocial-network/    
 
 ## [License:](#license:)
 
-       This project is licensed under the ISC license.
+       This project is licensed under the MIT license.
    
 ## [Contributing:](#contributing:)
 
@@ -102,7 +91,6 @@ Example of testing a route in Insomnia:
 
 **If more questions arise you can also contact CarolinaRaIs at determination28@gmail.com**
    
-
        
 ------------------------------------------------------------------------------------------------
    
